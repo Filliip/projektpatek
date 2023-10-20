@@ -36,3 +36,12 @@ p{
   border-radius: 50px;
 }
 
+.jirkasmrdi {
+  border-radius: 50px;
+  font-size: 100px;
+ margin-left: auto;
+ max-width: fit-content;
+ margin-right: auto;
+ margin-top: auto;
+ 
+}
