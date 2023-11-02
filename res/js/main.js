@@ -19,8 +19,7 @@ clickUpgrade.onclick = () => {
     // numberOfCookies = numberOfCookies - 50;
     numberOfCookies -= clickUpgradePrice;
     clickUpgradePrice *=2;
-    numberOfCookies -= 50;
-    clickUpgrade.innerHTML = ´Buy click upgrade: $(clickUpgrade)
+    clickUpgrade.innerHTML = ("upgrade: " + clickUpgradePrice)
     //zvednout klikani o 1
     cookieIncreaseNumber++;
     counter.innerText = "Šmoula:" + numberOfCookies;
