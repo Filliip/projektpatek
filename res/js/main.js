@@ -1,44 +1,53 @@
 const cookie = document.getElementById("cookie");
 const counter = document.getElementById("counter");
-const clickUpgrade = document.getElementById("clickUpgrade");
-const autoclickerUpgrade = document.getElementById("autoclickerUpgrade");
+const reset = document.getElementById("reset");
+const upgrade = document.getElementById("upgrade");
+const autoclickerUpgrade = document.getElementById("autoclicker");
 
 let numberOfCookies = 0;
-let cookieIncreaseNumber = 1;
-let autoclickerCookieIncreaseNumber = 0;
-let autoclickerInterval;
+let cookieIncrease = 1;
 let clickUpgradePrice = 50;
-cookie.onclick = () => {
-  numberOfCookies += cookieIncreaseNumber;
-  counter.innerText = "Kuřátka:" + numberOfCookies;
-};
+let autoclickerInterval;
+let autoclickerCookieIncreaseNumber = 0;
+let autoclickerUpgradePrice = 100;
 
-clickUpgrade.onclick = () => {
-  if (numberOfCookies >= 50) {
-    //odecist cenu
-    // numberOfCookies = numberOfCookies - 50;
-    numberOfCookies -= clickUpgradePrice;
-    clickUpgradePrice *=2;
-    clickUpgrade.innerHTML = ("upgrade: " + clickUpgradePrice)
-    //zvednout klikani o 1
-    cookieIncreaseNumber++;
-    counter.innerText = "Kuřátka:" + numberOfCookies;
-  }
-};
+cookie.onclick = () => {
+    numberOfCookies += cookieIncrease;
+counter.innerText = ( "BALLS "+ Math.round(numberOfCookies));
+
+}
+
+reset.onclick = () => {
+    numberOfCookies = 0;
+    counter.innerText = ( "BALLS "+ 0);
+}
+
+upgrade.onclick = () =>{
+    if(numberOfCookies >= clickUpgradePrice) {
+        numberOfCookies -= clickUpgradePrice;
+        cookieIncrease += 1;
+        counter.innerText = ( "BALLS "+ Math.round(numberOfCookies));
+        clickUpgradePrice *=1.2;
+        upgrade.innerText = "upgrade: " + Math.round(clickUpgradePrice);
+        
+        
+    }
+}
 
 autoclickerUpgrade.onclick = () => {
-  if (numberOfCookies >= 100) {
-    //odecteme cenu
-    numberOfCookies -= 100;
-    //zobrazime pocet susenek
-    counter.innerText = "Kuřátka:" + numberOfCookies;
-    autoclickerCookieIncreaseNumber++;
-    //zastavime interval
-    clearInterval(autoclickerInterval);
-    //spustime autoclicker
-    autoclickerInterval = setInterval(() => {
-      numberOfCookies += autoclickerCookieIncreaseNumber;
-      counter.innerText = "Kuřátko:" + numberOfCookies;
-    }, 1000);
-  }
-};
+    if (numberOfCookies >= autoclickerUpgradePrice) {
+        numberOfCookies -= autoclickerUpgradePrice;
+        autoclickerUpgradePrice *=1.2;
+        autoclicker.innerText = "autoclicker: " + Math.round(autoclickerUpgradePrice);
+      counter.innerText = "BALLS:" + Math.round(numberOfCookies);
+
+      autoclickerCookieIncreaseNumber++;
+      clearInterval(autoclickerInterval);
+
+      autoclickerInterval = setInterval(() => {
+        numberOfCookies += autoclickerCookieIncreaseNumber;
+
+        counter.innerText = "BALLS:" + Math.round(numberOfCookies);
+      }, 1000);
+    }
+  };
