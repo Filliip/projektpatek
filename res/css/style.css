@@ -3,27 +3,41 @@
   width: 100%;
   transition: 300ms;
   cursor: pointer;
+  
 }
 #cookie:hover{
   transform: scale(1.5);
   transition: 300ms;
+  opacity: 0;
 }
 
 
 
 
 body{
-  background: url("../img/0aFebUuH-smurf.jfif");
+  background: url("../img/kfc-gxi9z9gm4o78gsh7.jpg  ");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  
 }
 
 #kok{
   display: table;
   margin: 0 auto;
   margin-top: 5em;
-  height: 100px;
+  max-width: fit-content;
+  height: fit-content;
 }
+
+#kok:hover{
+  background: url("../img/stažený_soubor-removebg-preview.png");
+  background-repeat: no-repeat;
+  transform: scale(1.2);
+  transition: 400ms;
+  
+}
+
 
 p{
   font-size: 30px;
@@ -36,12 +50,48 @@ p{
   border-radius: 50px;
 }
 
-.jirkasmrdi {
-  border-radius: 50px;
-  font-size: 100px;
- margin-left: auto;
- max-width: fit-content;
- margin-right: auto;
- margin-top: auto;
+.kok1{
+
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 20px;
+  width:150px;
+  height: 50px;
+  background-color:red;
+  color: aliceblue;
+  font-size: 20px;
  
 }
+
+.kok2{
+
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 20px;
+  height: 50px;
+  color: aliceblue;
+  background-color: red;
+  font-size: 20px;
+  
+}
+
+.kok1:hover{
+  color: black;
+  transition: 300ms;
+  background-color:white ;
+}
+
+.kok2:hover{
+  color: black;
+  transition: 300ms;
+  background-color: white;
+}
+
+.kok3{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+

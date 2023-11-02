@@ -10,7 +10,7 @@ let autoclickerInterval;
 let clickUpgradePrice = 50;
 cookie.onclick = () => {
   numberOfCookies += cookieIncreaseNumber;
-  counter.innerText = "Šmoula:" + numberOfCookies;
+  counter.innerText = "Kuřátka:" + numberOfCookies;
 };
 
 clickUpgrade.onclick = () => {
@@ -22,7 +22,7 @@ clickUpgrade.onclick = () => {
     clickUpgrade.innerHTML = ("upgrade: " + clickUpgradePrice)
     //zvednout klikani o 1
     cookieIncreaseNumber++;
-    counter.innerText = "Šmoula:" + numberOfCookies;
+    counter.innerText = "Kuřátka:" + numberOfCookies;
   }
 };
 
@@ -31,14 +31,14 @@ autoclickerUpgrade.onclick = () => {
     //odecteme cenu
     numberOfCookies -= 100;
     //zobrazime pocet susenek
-    counter.innerText = "Šmoula:" + numberOfCookies;
+    counter.innerText = "Kuřátka:" + numberOfCookies;
     autoclickerCookieIncreaseNumber++;
     //zastavime interval
     clearInterval(autoclickerInterval);
     //spustime autoclicker
     autoclickerInterval = setInterval(() => {
       numberOfCookies += autoclickerCookieIncreaseNumber;
-      counter.innerText = "Šmoula:" + numberOfCookies;
+      counter.innerText = "Kuřátko:" + numberOfCookies;
     }, 1000);
   }
 };
